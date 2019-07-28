@@ -219,4 +219,21 @@ def update_weights(self, external_vector, output_vector, input_vector, learning_
         return resulting_vector
  ```
  #### The network
- The last component of a neural network is
+ The last component of a neural network is the network itself, which will be simply a collection of layers:
+ ```
+ def __init__(self, list_objective_functions, list_of_dimensions, learning_rate):
+        self.input_dim = list_of_dimensions[0]
+        self.learning_rate = learning_rate
+        if (list_objective_functions.shape[0] != (list_of_dimensions.shape[0] - 1)):
+            raise ValueError('The number of objective functions must be equal to the list of dimensions')
+            
+        list_of_layers = []
+        for i in range(list_of_dimensions.shape[0] - 1):
+            input_dimension  = list_of_dimensions[i]
+            output_dimension = list_of_dimensions[i + 1]
+            
+            new_layer = Layer.Layer_3(input_dimension, output_dimension, list_objective_functions[i])
+            list_of_layers.append(new_layer)
+        
+        self.layer_list = np.array(list_of_layers)
+        ```
