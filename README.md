@@ -236,4 +236,4 @@ def update_weights(self, external_vector, output_vector, input_vector, learning_
             list_of_layers.append(new_layer)
         
         self.layer_list = np.array(list_of_layers)
-        ```
+```
