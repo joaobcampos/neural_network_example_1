@@ -337,6 +337,46 @@ The following plot shows how the error average decreases with each one of the 10
 
 <img src="https://github.com/joaobcampos/neural_network_example_1/blob/master/images/sec_5.png" alt="drawing" width="600" class="center"/>
 
+# References
+
+[1] Frank Rosenblatt. The perceptron: a probabilistic model for information storage and organization in the brain.
+Psychological review, 65(6):386, 1958.
+[2] F. Rosenblatt. Principles of Neurodynamics. Spartan, New York, 1962.
+[3] B. Widrow and M.E. Hoff. Associative storage and retrieval of digital information in networks of adaptive neurons.
+Biological Prototypes and Synthetic Systems, 1:160, 1962.
+[4] J. Schmidhuber. Deep learning in neural networks: An overview. Neural Networks, 61:85–117, 2015. Published
+online 2014; based on TR arXiv:1404.7828 [cs.NE].
+[5] Frank Rosenblatt. Principles of Neurodynamics. Spartan Books, 1962.
+[6] Vinod Nair and Geoffrey E. Hinton. Rectified linear units improve restricted boltzmann machines. In
+Proceedings of the 27th International Conference on International Conference on Machine Learning, ICML’10, pages 807–814,
+USA, 2010. Omnipress.
+[7] K. He, X. Zhang, S. Ren, and J. Sun.  Delving deep into rectifiers:  Surpassing human-level performance on imagenet classification. In 2015 IEEE International Conference on Computer Vision (ICCV), pages 1026–1034, Dec 2015.
+[8] Ashmore S.C. Gashler M.S. Training deep fourier neural networks to fit time-series data. In Proceedings of the
+27th International Conference on International Conference on Machine Learning, International Conference on
+Intelligent Computing, pages 48–55. Springer, Cham, 2014.
+[9] S. E. Dreyfus.  The computational solution of optimal control problems with time lag.
+IEEE Transactions on Automatic Control, 18(4):383–385, 1973.
+[10] Seppo Linnainmaa. Taylor expansion of the accumulated rounding error. BIT Numerical Mathematics, 16(2):146–160, 1976.
+[11] S. Linnainmaa. The representation of the cumulative rounding error of an algorithm as a Taylor expansion of the
+local rounding errors. Master’s thesis, Univ. Helsinki, 1970.
+[12] David E. Rumelhart, Geoffrey E. Hinton, and Ronald J. Williams. Learning representations by back-propagating
+errors. Nature 323:533–, October 1986.
+[13]  R. A. Fisher. The use of multiple measurements in taxonomic problems. Annual Eugenics, 7:179–188, 1936.
+[14] Travis Oliphant. NumPy: A guide to NumPy. USA: Trelgol Publishing, 2006–. [Online; accessed <today>].
+[15] Y. LeCun, B. Boser, J. S. Denker, D. Henderson, R. E. Howard, W. Hubbard, and L. D. Jackel. Backpropagation
+applied to handwritten zip code recognition.
+Neural Comput., 1(4):541–551, December 1989.
+[16] Yelong Shen, Xiaodong He, Jianfeng Gao, Li Deng and Gregoire Mesnil. Learning semantic representations using convolutional neural networks for web search. WWW 2014, April 2014
+[17] François Chollet et al. Keras. https://keras.io, 2015.
+[18] Martín Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen, Craig Citro, Greg S. Corrado, Andy
+Davis, Jeffrey Dean, Matthieu Devin, Sanjay Ghemawat, Ian Goodfellow, Andrew Harp, Geoffrey Irving, Michael
+Isard, Yangqing Jia, Rafal Jozefowicz, Lukasz Kaiser, Manjunath Kudlur, Josh Levenberg, Dan Mané, Rajat
+Monga, Sherry Moore, Derek Murray, Chris Olah, Mike Schuster, Jonathon Shlens, Benoit Steiner, Ilya Sutskever,
+Kunal Talwar, Paul Tucker, Vincent Vanhoucke, Vijay Vasudevan, Fernanda Viégas, Oriol Vinyals, Pete Warden,
+Martin Wattenberg, Martin Wicke, Yuan Yu, and Xiaoqiang Zheng. TensorFlow: Large-scale machine learning on
+heterogeneous systems, 2015. Software available from tensorflow.org.
+[19]  Sebastian Ruder. An overview of gradient descent optimization algorithms. CoRR, abs/1609.04747, 2016.
+
 # Annex
 <img src="https://github.com/joaobcampos/neural_network_example_1/blob/master/images/sec_7_1.png" alt="drawing" width="600" class="center"/>
 
