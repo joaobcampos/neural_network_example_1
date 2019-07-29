@@ -338,3 +338,8 @@ The following plot shows how the error average decreases with each one of the 10
 <img src="https://github.com/joaobcampos/neural_network_example_1/blob/master/images/sec_5.png" alt="drawing" width="600" class="center"/>
 
 # Annex
+<img src="https://github.com/joaobcampos/neural_network_example_1/blob/master/images/sec_7_1.png" alt="drawing" width="600" class="center"/>
+
+<img src="https://github.com/joaobcampos/neural_network_example_1/blob/master/images/sec_7_2.png" alt="drawing" width="600" class="center"/>
+
+<img src="https://github.com/joaobcampos/neural_network_example_1/blob/master/images/sec_7_3.png" alt="drawing" width="600" class="center"/>
