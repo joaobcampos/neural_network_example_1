@@ -242,21 +242,21 @@ The network is a collection of layers: ``` self.layer_list ```. In order for the
 Has the backpropagation algorithm is the resposability of the network, has all layers' weights and biases must be updated. The propagation algorithm is:
 ```
 #Used for training only
-    def backpropagation_algorithm(self, sample, target):
-        list_of_outputs = []
-        # Forward pass
-        list_of_outputs.append(sample)
-        vec = sample.copy()
-        for layer in self.layer_list:
-            vec = layer.calculate_layer_output(vec)
-            list_of_outputs.append(vec)
+def backpropagation_algorithm(self, sample, target):
+    list_of_outputs = []
+    # Forward pass
+    list_of_outputs.append(sample)
+    vec = sample.copy()
+    for layer in self.layer_list:
+        vec = layer.calculate_layer_output(vec)
+        list_of_outputs.append(vec)
             
-        external_vector = self.grad_output_function(list_of_outputs[-1], target)
+    external_vector = self.grad_output_function(list_of_outputs[-1], target)
         
-        # Backward pass: In this 
-        for i in range(-1, -(len(list_of_outputs)), -1):
-            x_out = list_of_outputs[i]
-            x_in  = list_of_outputs[i-1]
-            self.layer_list[i].update_weights(external_vector, x_out, x_in, self.learning_rate)
-            external_vector = self.layer_list[i].return_derivative_vector(external_vector)
+    # Backward pass: In this 
+    for i in range(-1, -(len(list_of_outputs)), -1):
+        x_out = list_of_outputs[i]
+        x_in  = list_of_outputs[i-1]
+        self.layer_list[i].update_weights(external_vector, x_out, x_in, self.learning_rate)
+        external_vector = self.layer_list[i].return_derivative_vector(external_vector)
 ```
