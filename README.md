@@ -333,3 +333,8 @@ def evaluate_error_datasets(X_dataset, y_dataset, network):
         error_list[i] = error[0,0]
     return error_list
 ```
+The following plot shows how the error average decreases with each one of the 10000 iterations:
+
+<img src="https://github.com/joaobcampos/neural_network_example_1/blob/master/images/sec_5.png" alt="drawing" width="600" class="center"/>
+
+# Annex
