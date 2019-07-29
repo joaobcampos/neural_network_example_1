@@ -260,3 +260,76 @@ def backpropagation_algorithm(self, sample, target):
         self.layer_list[i].update_weights(external_vector, x_out, x_in, self.learning_rate)
         external_vector = self.layer_list[i].return_derivative_vector(external_vector)
 ```
+As you can see, in the forward pass, the outputs of each layer are calculated, and stored in ```list_of_outputs```, but for each layer, the weights and biases are untouched. In the backward pass we calculate the <MATH>e&#8407;<sub>N</sub></MATH> vector in the line ``` external_vector = self.grad_output_function(list_of_outputs[-1], target) ``` which will correspond, in this case, to the difference between the last vector and the target, and, in the for cycle, we use the ``` update_weights ```, which will implement equations (22) and (23).
+
+### Results
+We train the network in batches. Firstly, in the notebook training.ipynb, the network is created:
+```
+#Creation of the network
+dimensions = np.array([4, 8, 5, 3])
+functions = np.array([ActivationFunction.sigmoid(), ActivationFunction.sigmoid(), ActivationFunction.sigmoid()])
+ff_nn = NeuralNetwork.NeuralNetwork(functions, dimensions, 0.01)
+```
+Then, the data is loaded:
+```
+#Load training and testing data
+DataLoader = LoadData.LoadData()
+X_train, X_test, y_train, y_test = DataLoader.partition_dataset()
+```
+And finally, the network is trained:
+```
+epochs = 10000
+batch_size = 5
+training_error = np.zeros(shape=(epochs, X_train.shape[2])) # Container of the training error
+testing_error = np.zeros(shape=(epochs, X_test.shape[2])) #Container for the testing error
+for k in range(epochs):
+    # Select withing the training set the samples that will be given for the batch
+    indexes = np.random.randint(0, high=99, size=(batch_size,))
+    X_train_ = X_train[:,:,indexes].copy()
+    y_train_ = y_train[:,:,indexes].copy()
+    
+    #Bear in mind this is not the most efficient way to implement a nn. 
+    #It was used merely to illustrate the mathematical concepts
+    #At this point the weights and biases of the network were updated for this specific
+    #sample
+    for i in range(X_train_.shape[2]):
+        X_in = X_train_[:,:,i]
+        y_in = y_train_[:,:,i]
+        ff_nn.backpropagation_algorithm(X_in, y_in)
+        
+    # It is interesting to see how the error evolves with the time
+    # At this point we run the network as is for the test set
+    training_error[k, :] = evaluate_error_datasets(X_train, y_train, ff_nn)
+    testing_error[k, :]  = evaluate_error_datasets(X_test, y_test, ff_nn)
+```
+In this case, for 10000 times, 5 random train vectors are picked along with their targets:
+```
+X_train_ = X_train[:,:,indexes].copy()
+y_train_ = y_train[:,:,indexes].copy()
+```
+Then, for each vector, the backpropagation algorithm is run:
+```
+for i in range(X_train_.shape[2]):
+        X_in = X_train_[:,:,i]
+        y_in = y_train_[:,:,i]
+        ff_nn.backpropagation_algorithm(X_in, y_in)
+```
+
+In the lines:
+```
+training_error[k, :] = evaluate_error_datasets(X_train, y_train, ff_nn)
+testing_error[k, :]  = evaluate_error_datasets(X_test, y_test, ff_nn)
+```
+The network's parameters calculated in a given iteration are applied to the train and test sets. And their error stored. The function used is:
+```
+def evaluate_error_datasets(X_dataset, y_dataset, network):
+    error_list = np.zeros((X_dataset.shape[2], ))
+    for i in range(X_dataset.shape[2]):
+        X_in = X_dataset[:,:,i]
+        y    = y_dataset[:,:,i]
+        y_out = ff_nn.propagation(X_in)
+        diff = y - y_out
+        error = np.dot(diff.T, diff)
+        error_list[i] = error[0,0]
+    return error_list
+```
