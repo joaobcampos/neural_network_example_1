@@ -340,10 +340,10 @@ The following plot shows how the error average decreases with each one of the 10
 # References
 
 [1] Frank Rosenblatt. The perceptron: a probabilistic model for information storage and organization in the brain.
-Psychological review, 65(6):386, 1958.\
-[2] F. Rosenblatt. Principles of Neurodynamics. Spartan, New York, 1962.\
+Psychological review, 65(6):386, 1958.<br/>
+[2] F. Rosenblatt. Principles of Neurodynamics. Spartan, New York, 1962.<br/>
 [3] B. Widrow and M.E. Hoff. Associative storage and retrieval of digital information in networks of adaptive neurons.
-Biological Prototypes and Synthetic Systems, 1:160, 1962.\
+Biological Prototypes and Synthetic Systems, 1:160, 1962.<br/>
 [4] J. Schmidhuber. Deep learning in neural networks: An overview. Neural Networks, 61:85–117, 2015. Published
 online 2014; based on TR arXiv:1404.7828 [cs.NE].\
 [5] Frank Rosenblatt. Principles of Neurodynamics. Spartan Books, 1962.\
