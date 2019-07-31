@@ -1,8 +1,8 @@
 This article is reflects the process of understanding what are neural networks and how they work. It will be divided in 3 main parts:
 
-Part I - What are feed forward neural network.\
-Part II - Maths: the mathematical equations behind neural networks.  
-Part III - How can the concepts behind it appear on code.
+<p>Part I - What are feed forward neural network.</p>
+<p>Part II - Maths: the mathematical equations behind neural networks.</p>  
+<p>Part III - How can the concepts behind it appear on code.</p>
 
 # Part I
 
