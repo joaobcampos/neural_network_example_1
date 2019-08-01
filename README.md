@@ -99,7 +99,7 @@ We will explore the vector:
 ![sec_4_3_4](/assets/images/sec_4_3_4.png)
 
 If you do the maths, you will see that this vector can simply be written as:
-In other words, this will will be the error vector that will be passed to layer N-1 by layer N in the propagation pass. Thus, the final gradient can be written as:
+In other words, this will will be the error vector that will be passed to layer N-1 by layer N in the propagation pass. Thus, the final gradient can be written as (remember <MATH>e&#8407;<sub>N+1</sub></MATH>=<MATH>x&#8407;<sub>N</sub></MATH> - <MATH>y&#8407;</MATH>):
 
 ![sec_4_3_5](/assets/images/sec_4_3_5.png)
 
