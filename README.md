@@ -3,6 +3,7 @@ This article is reflects the process of understanding what are neural networks a
 <p>Part I - What are feed forward neural network.</p>
 <p>Part II - Maths: the mathematical equations behind neural networks.</p>  
 <p>Part III - How can the concepts behind it appear on code.</p>
+<p> Annex </p>
 
 # Part I
 
@@ -22,12 +23,12 @@ Looking again at (1), it is possible to see that, without the functions <MATH>f<
 
 ![activation_functions](/assets/images/sec_2_1.png)
 
-Performing some calculations we can see that their derivatives are:
+Performing some calculations (see the Annex) we can see that their derivatives are:
 
 ![derivative_activation_functions](/assets/images/sec_2_2.png)
 
 
-As you can see, you can obtain the derivative of each function as a function of itself (if you want to know how the derivatives were obtained, you can check the annex). You may have noticed the index in the softmax function. These activation functions will be applied to each element of a vector. While the sigmoid or the hyperbolic functions only take into consideration the vector itself, the softmax function takes into account all the elements of the vector. Although these are the activation functions considered in this post, we have many others: the ReLU [6], [7], the sinusoid, the softplus or the identity used in [8].
+As you can see, you obtain the derivative of each function as a function of itself. You may have noticed the index in the softmax function. These activation functions will be applied to each element of a vector. While the sigmoid or the hyperbolic functions only take into consideration the vector itself, the softmax function takes into account all the elements of the vector. Although these are the activation functions considered in this post, we have many others: the ReLU [6], [7], the sinusoid, the softplus or the identity used in [8].
 
 ## How to train a network: Objective function
 The two previous sections described the elements of a neural network. The knots and bolts of the device. The most obvious one is to learn. For that we need a set of input/output pairs. The vectors <MATH>x&#8407;<sub>0</sub></MATH> are the inputs and the vectors <MATH>y&#8407;</MATH> are the corresponding expected outputs. At the end, we want that, given the vectors <MATH>x&#8407;<sub>0</sub></MATH>, the network outputs the corresponding vector <MATH>y&#8407;</MATH>. Take this claim with a pinch of salt, since if your neural network outputs exactly what you want, it may mean that it has learned the training set too well and may not be able to accurately predict the output of a samples <MATH>x&#8407;<sub>0</sub></MATH> that it has never seen.
