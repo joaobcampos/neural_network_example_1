@@ -44,7 +44,7 @@ Assuming vectors <MATH>x&#8407;<sub>N</sub></MATH> and <MATH>y&#8407;</MATH> hav
 ## How to make a neural network learn: Back-propagation
 
 The back-propagation method was firstly proposed in [9], [10], [11] and [12]. It cost me a good deal of ink and paper trying to understand it. Perhaps my efforts will be useful to others, hence this post, but nothing replaces the self work of making the calculations oneself.\
-The first thing one should have in mind by reading this section is that our objective function depends implicitly on all the weight matrices and biases of all layers. So we will need the chain rule to obtain the gradients for the parameters (weight matrices and biases in all layers). The purpose of this section is trying to uncover a generic rule behind the back-propagation algorithm so we can actually implement it in code. 
+The first thing one should have in mind by reading this section is that our objective function depends implicitly on all the weight matrices and biases of all layers. So we will need the chain rule to obtain the gradients for the parameters (weight matrices and biases in all layers). The purpose of this section is to uncover a generic rule behind the back-propagation algorithm so we can actually implement it in code. 
 
 ### The chain rule
 The chain rule is the most important factor in the back-propagation algorithm. It is this rule that allows the replacement of a layer's the activation function or a network's objective function and the back propagation while the back-propagation method remains the same. This means it allows this method to be modular.
