@@ -18,7 +18,7 @@ The purpose of this post is to make a bridge between the mathematical concepts a
 
 ## Activation functions
 
-Looking again at (1), it is possible to see that, without the functions <MATH>f<sub>n</sub>(.)</MATH>, a neural network would be a succession of linear operations. Usually, these functions, called activation functions, are used to make the network capture non linear relationships between variables and eventually limit each value of the output vector. The functions usually used have another interesting property: their derivatives can be written as functions of themselves. Three functions normally considered are the sigmoid (4), the softmax (5) and the hyperbolic tangent (6):
+Looking again at (1), it is possible to see that, without the functions <MATH>f<sub>n</sub>(.)</MATH>, a neural network would be a succession of linear operations. Usually, these functions, called activation functions, are used to make the network capture non linear relationships between variables and eventually limit each value of the output vector. The functions can have another interesting property: their derivatives may be written as functions of themselves. Three functions normally considered are the sigmoid (4), the softmax (5) and the hyperbolic tangent (6):
 
 ![activation_functions](/assets/images/sec_2_1.png)
 
