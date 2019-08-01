@@ -73,7 +73,7 @@ Equations (18) and (19) can be written in a generay way as:
 ![sec_4_2_4](/assets/images/sec_4_2_4.png)
 
 where o represents elementwise multiplication.
-The conclusion of this subsection is that, considering a learning rate of \eta we can write the update on the weight matrix and bias of the last layer as:
+The conclusion of this subsection is that, considering a learning rate of \(\eta\) we can write the update on the weight matrix and bias of the last layer as:
 
 ![sec_4_2_5](/assets/images/sec_4_2_5.png)
 
