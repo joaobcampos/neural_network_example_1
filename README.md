@@ -68,7 +68,7 @@ Thus, putting it all together, we have:
 
 ![sec_4_2_3](/assets/images/sec_4_2_3.png)
 
-If we equation a global formula, we can rewrite (18) and (19) as:
+Equations (18) and (19) can be written in a generay way as:
 
 ![sec_4_2_4](/assets/images/sec_4_2_4.png)
 
