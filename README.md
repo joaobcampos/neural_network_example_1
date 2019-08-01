@@ -60,7 +60,7 @@ We will first calculate the derivative of our objective function in order to the
 ![sec_4_2_1](/assets/images/sec_4_2_1.png)
 
 
-Now, for equations (12) and (13), we can calculate each element in the chain rule:
+Now, for equations (12) and (13), we can calculate each element in the chain rule as:
 
 ![sec_4_2_2](/assets/images/sec_4_2_2.png)
 
