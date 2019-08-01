@@ -72,12 +72,11 @@ Equations (18) and (19) can be written in a generay way as:
 
 ![sec_4_2_4](/assets/images/sec_4_2_4.png)
 
-where o represents elementwise multiplication.
-The conclusion of this subsection is that, considering a learning rate of &eta; we can write the update on the weight matrix and bias of the last layer as:
+where o represents elementwise multiplication. The conclusion of this subsection is that, considering a learning rate of &eta; we can write the update on the weight matrix and bias of the last layer as:
 
 ![sec_4_2_5](/assets/images/sec_4_2_5.png)
 
-In this section we ended up with an expression that allows us to calculate the gradients of the last layer's parameters as functions of it inputs/output vectors. Let's go one layer back.
+In this section we ended up with an expression that allows us to calculate the gradients of the last layer's parameters as functions of it inputs/output vectors. For future reference, in this case, we can see vector <MATH>e&#8407;<sub>N+1</sub></MATH>=<MATH>x&#8407;<sub>N</sub></MATH> - <MATH>y&#8407;</MATH> as the first error vector that will be backpropagated. Let's go one layer back.
 
 ### One layer before the last
 As an effort to observe a general rule, we will calculate the derivative of gradients of the layer before the last.
