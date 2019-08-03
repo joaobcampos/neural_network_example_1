@@ -179,7 +179,7 @@ class sigmoid(ActivationFunction):
     def function_value(self, x):
         return (1/(1 + np.exp(-x)))
     
-    #equation 35 of the article
+   
     def gradient_weights(self, external_vector, x_out, x_in):
         v = external_vector * (1-x_out) * x_out
         return np.dot(v, x_in.T)
@@ -208,9 +208,9 @@ In this case, the parameters are being initialized randomly. It it the layer's r
 * Update its weights and biases:
 ```
 def update_weights(self, external_vector, output_vector, input_vector, learning_rate):
-        #Eq 19
+        
         gradient_weights = self.activation_function.gradient_weights(external_vector,output_vector, input_vector)
-        #Eq 20
+       
         gradient_bias    = self.activation_function.gradient_bias(external_vector, output_vector)
         self.weights = self.weights - learning_rate * gradient_weights #equation 21
         self.bias    = self.bias    - learning_rate * gradient_bias #Equation 22
