@@ -31,8 +31,10 @@ Performing some calculations (see the Annex) we can see that their derivatives a
 As you can see, you obtain the derivative of each function as a function of itself. You may have noticed the index in the softmax function. These activation functions will be applied to each element of a vector. While the sigmoid or the hyperbolic functions only take into consideration the vector itself, the softmax function takes into account all the elements of the vector. Although these are the activation functions considered in this post, we have many others: the ReLU [6], [7], the sinusoid, the softplus or the identity used in [8].
 
 ## Purpose of a network: Learn from data
-The two previous sections described the elements of a neural network. The knots and bolts of the device. However, this tells us nothing about its purpose, and its purpose is to learn from data. For that we need a set of input/output pairs. The vectors <MATH>x&#8407;<sub>0</sub></MATH> are the inputs and the vectors <MATH>y&#8407;</MATH> are the corresponding expected outputs. At the end, we want that, given the vectors <MATH>x&#8407;<sub>0</sub></MATH>, the network outputs the corresponding vector <MATH>y&#8407;</MATH>. Take this claim with a pinch of salt, since if your neural network outputs exactly what you want, it may mean that it has learned the training set too well and may not be able to accurately predict the output of a samples <MATH>x&#8407;<sub>0</sub></MATH> that it has never seen.
-But if we carry on with our reasoning, we want our vectors <MATH>x&#8407;<sub>N</sub></MATH>, remember, the last vectors of our network to be as close as possible to <MATH>y&#8407;</MATH>.
+The two previous sections described the elements of a neural network. The knots and bolts of the device. However, this tells us nothing about its purpose, and its purpose is to learn from data. For that we need a set of input/output pairs. 
+
+The vectors <MATH>x&#8407;<sub>0</sub></MATH> are the inputs and the vectors <MATH>y&#8407;</MATH> are the corresponding expected outputs. At the end, we want that, given the vectors <MATH>x&#8407;<sub>0</sub></MATH>, the network outputs the corresponding vector <MATH>y&#8407;</MATH>. Take this claim with a pinch of salt, since if your neural network outputs exactly what you want, it may mean that it has learned the training set too well and may not be able to accurately predict the output of a samples <MATH>x&#8407;<sub>0</sub></MATH> that it has never seen.
+If we carry on with our reasoning, we want our vectors <MATH>x&#8407;<sub>N</sub></MATH>, remember, the last vectors of our network to be as close as possible to <MATH>y&#8407;</MATH>.
 The objective function is the way we measure the similarity between those vectors. One of the most common objective functions is:
 
 ![nn_objective_function](/assets/images/sec_3.png)
@@ -43,7 +45,8 @@ Assuming vectors <MATH>x&#8407;<sub>N</sub></MATH> and <MATH>y&#8407;</MATH> hav
 
 ## How to make a neural network learn: Back-propagation
 
-The back-propagation method was firstly proposed in [9], [10], [11] and [12]. It cost me a good deal of ink and paper trying to understand it. Perhaps my efforts will be useful to others, hence this post, but nothing replaces the self work of making the calculations oneself.</br>
+The back-propagation method was firstly proposed in [9], [10], [11] and [12]. It cost me a good deal of ink and paper trying to understand it. Perhaps my efforts will be useful to others, hence this post, but nothing replaces the self work of making the calculations oneself.
+
 The first thing one should have in mind by reading this section is that our objective function depends implicitly on all the weight matrices and biases of all layers. So we will need the chain rule to obtain the gradients for the parameters (weight matrices and biases in all layers). The purpose of this section is to uncover a generic rule behind the back-propagation algorithm so we can actually implement it in code. 
 
 ### The chain rule
