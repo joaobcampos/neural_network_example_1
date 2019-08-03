@@ -223,6 +223,7 @@ def update_weights(self, external_vector, output_vector, input_vector, learning_
         resulting_vector = np.dot(self.weights.T, external_vector) #equation 36 of the article
         return resulting_vector
  ```
+ 
 ####  The Network
 The last component of a neural network is the network itself, which will be simply a collection of layers:
 ```
