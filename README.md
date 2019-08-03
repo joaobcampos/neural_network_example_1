@@ -201,6 +201,7 @@ def __init__(self, input_dimension, output_dimension, activation_function):
 In this case, the parameters are being initialized randomly. It it the layer's responsability to:
 * Calculate its own output:
 ```
+ #Eq 1
  def calculate_layer_output(self, input_vector):
         linear_vector = np.dot(self.weights, input_vector) + self.bias
         return self.activation_function.function_value(linear_vector)
@@ -212,11 +213,12 @@ def update_weights(self, external_vector, output_vector, input_vector, learning_
         gradient_weights = self.activation_function.gradient_weights(external_vector,output_vector, input_vector)
        
         gradient_bias    = self.activation_function.gradient_bias(external_vector, output_vector)
-        self.weights = self.weights - learning_rate * gradient_weights #equation 21
-        self.bias    = self.bias    - learning_rate * gradient_bias #Equation 22
+        self.weights = self.weights - learning_rate * gradient_weights #equation 22
+        self.bias    = self.bias    - learning_rate * gradient_bias #Equation 23
  ```
  * Return the error vector for the previous layer (<MATH>e&#8407;<sub>m</sub></MATH>):
  ```
+ #Eq 35
  def return_derivative_vector(self, external_vector):
         resulting_vector = np.dot(self.weights.T, external_vector) #equation 36 of the article
         return resulting_vector
@@ -242,7 +244,7 @@ def update_weights(self, external_vector, output_vector, input_vector, learning_
 ```
 The network is a collection of layers: ``` self.layer_list ```. In order for the network to be created, in this case, we give it a learning rate, a list of dimensions for each layer and a list of objective functions (one for each layer). The list of dimensions contain the input dimension for each layer. The input dimension for layer m is the output dimension for layer m-1.
 
-Has the backpropagation algorithm is the resposability of the network, has all layers' weights and biases must be updated. The propagation algorithm is:
+As the backpropagation algorithm is the responsability of the network, has all layers' weights and biases must be updated. The propagation algorithm is:
 ```
 #Used for training only
 def backpropagation_algorithm(self, sample, target):
