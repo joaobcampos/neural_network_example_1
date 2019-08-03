@@ -143,9 +143,9 @@ So, if, for example, our example is an Iris Setosa, we want our network to give:
 
 ### The code
 The code is structured to show the modular concepts behind a neural network. We have the packages:
-* ActivationFunction: where we define the possible activation functions for a layer and its gradients.
-* Layer: where we define the operations that a layer must perform: calculate its outputs using its activation function (1) and update its weights/biases using the gradients of its activation function and the propagation error (22), (23).
-* NeuralNetwork: where we define the operations a network must have. Its main operations are: providing the implementation of the back-propagation algorithm \textbf{backpropagation\_algorithm} and propagating an input vector to the output \textbf{propagate}.
+* ***neural_network/ActivationFunction.py***: where we define the possible activation functions for a layer and its gradients.
+* ***neural_network/Layer.py***: where we define the operations that a layer must perform: calculate its outputs using its activation function (1) and update its weights/biases using the gradients of its activation function and the propagation error (22), (23).
+* ***neural_network/NeuralNetwork.py***: where we define the operations a network must have. Its main operations are: providing the implementation of the back-propagation algorithm \textbf{backpropagation\_algorithm} and propagating an input vector to the output \textbf{propagate}.
 
 #### The activation function
 Every activation function must provide the following:
