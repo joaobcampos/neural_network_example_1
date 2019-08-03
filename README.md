@@ -224,7 +224,7 @@ def update_weights(self, external_vector, output_vector, input_vector, learning_
         return resulting_vector
  ```
  
- #### The network
+ #### The Network
  
  The last component of a neural network is the network itself, which will be simply a collection of layers:
  ```
