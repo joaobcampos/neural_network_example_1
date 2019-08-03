@@ -3,7 +3,6 @@ This article is reflects the process of understanding what are neural networks a
 <p>Part I - What are feed forward neural network.</p>
 <p>Part II - Maths: the mathematical equations behind neural networks.</p>  
 <p>Part III - How can the concepts behind it appear on code.</p>
-<p> Annex </p>
 
 # Part I
 
@@ -55,10 +54,12 @@ Basically this rule tells that, if y=f(x) and x=g(z), then we will have:
 
 ![chain_rule](/assets/images/sec_4_1.png)
 
-In the next two sections, we will use this rule to show how the back-propagation algorithm works. And, through equation (36), it is possible to observe an example of why the chain rule is important: it will allow modularity, by making the gradient of a single layer dependent only on its input and output vectors and an external vector (the backwards propagated error). Taking into account that only the output vector will depend on a layer's weights and biases, we could replace a layer's activation function without changing the rest of the network and the algorithm would work the same way. In the next subsections we will use this rule to calculate the gradient of the weights/biases for the last two layers.
+In the next two sections, we will use this rule to show how the back-propagation algorithm works. And, through equation (36), it is possible to observe an example of why the chain rule is important: it will allow modularity, by making the gradient of a single layer dependent only on its input and output vectors and an external vector (the backwards propagated error). 
+
+Taking into account that only the output vector will depend on a layer's weights and biases, we could replace a layer's activation function without changing the rest of the network and the algorithm would work the same way. In the next subsections we will use this rule to calculate the gradient of the weights/biases for the last two layers.
 
 ### Last layer
-We will first calculate the derivative of our objective function in order to the last layer weight matrix and bias (bear in mind <b>W<sub>n</sub></b> is a matrix, so it has two indexes).
+We will first calculate the derivative of our objective function in order to the last layer weight matrix and bias (bear in mind <b>W<sub>n</sub></b> is a matrix, so each element w<sub>i,j</sub> has two indexes).
 
 ![sec_4_2_1](/assets/images/sec_4_2_1.png)
 
