@@ -38,7 +38,7 @@ The objective function is the way we measure the similarity between those vector
 
 ![nn_objective_function](/assets/images/sec_3.png)
 
-Assuming vectors <MATH>x&#8407;<sub>N</sub></MATH> and <MATH>y&#8407;</MATH> have the same dimensions: L x 1. There are other functions, but for simplicity we will stick with this objective function for training and the sigmoid function for the activation, whose derivatives may not be written as functions of themselves only.
+Assuming vectors <MATH>x&#8407;<sub>N</sub></MATH> and <MATH>y&#8407;</MATH> have the same dimensions: L x 1. There are other functions, but for simplicity we will stick with this objective function for training and the sigmoid function for the activation.
 
 # Part II
 
