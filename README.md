@@ -8,7 +8,7 @@ This article is reflects the process of understanding what are neural networks a
 
 ## Introduction
 
-I have always seen neural networks as black boxes and recently, I tried to uncover what is behind them. The theme is vast as there are several types of networks and different architectures. In this post, I will only focus in the fully connected neural network, since it seems to be the oldest and simplest type of neural network to begin with [1], [2], [3] and [4]. The reason why I am writing this post is that until I could separate what a neural network is from its behavior, from what is it for, I would not understand them and also there is a huge amount of material in the web that is focused on the concept of perceptron [5], which is a valid approach, but, for me, it is obscures the fact that a neural network is basically this:
+I have been using neural networks in the past, and,recently, I decided to share my path to understanding them so I can perhaps make easier for new learners to understand what is behind them. The theme is vast as there are several types of networks and different architectures. In this post, I will only focus in the fully connected neural network, since it seems to be the oldest and simplest type of neural network to begin with [1], [2], [3] and [4]. The reason why I am writing this post is that until I could separate what a neural network is from its behavior, from what is it for, I would not understand them and also there is a huge amount of material in the web that is focused on the concept of perceptron [5], which is a valid approach, but, for me, it is obscures the fact that a neural network is basically this:
 
 ![nn_equations](/assets/images/sec_1.png) 
 
