@@ -12,7 +12,7 @@ I have been using neural networks in the past, and, recently, I decided to share
 
 ![nn_equations](/assets/images/sec_1.png) 
 
-Now it is easy to see that <MATH>x&#8407;<sub>n</sub></MATH>, <MATH>x&#8407;<sub>n-1</sub></MATH> and <MATH>b&#8407;<sub>n</sub></MATH> are vectors, <b>W<sub>n</sub></b> are matrices and <MATH>f<sub>n</sub>(.)</MATH> is a function applied to each element of a vector. So basically, a neural network is a succession of the same operation recursively, in which the output of layer l-1: <MATH>x&#8407;<sub>l-1</sub></MATH> is the input to the next layer l and <MATH>f<sub>l</sub></MATH> can vary between layers.
+Now it is easy to see that <MATH>x&#8407;<sub>n</sub></MATH>, <MATH>x&#8407;<sub>n-1</sub></MATH> and <MATH>b&#8407;<sub>n</sub></MATH> are vectors, <b>W<sub>n</sub></b> are matrices and <MATH>f<sub>n</sub>(.)</MATH> is a function applied to each element of a vector. So basically, a neural network is a succession of the same operation applied to different layers, in which the output of layer l-1: <MATH>x&#8407;<sub>l-1</sub></MATH> is the input to the next layer l and <MATH>f<sub>l</sub></MATH> can vary between layers.
 The purpose of this post is to make a bridge between the mathematical concepts and an implementation given in this repo.
 
 
