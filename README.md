@@ -33,7 +33,7 @@ As you can see, you obtain the derivative of each function as a function of itse
 The two previous sections described the elements of a neural network. The knots and bolts of the device. However, this tells us nothing about its purpose, and its purpose is to learn from data. For that we need a set of input/output pairs. 
 
 The vectors <MATH>x&#8407;<sub>0</sub></MATH> are the inputs and the vectors <MATH>y&#8407;</MATH> are the corresponding expected outputs. At the end, we want that, given the vectors <MATH>x&#8407;<sub>0</sub></MATH>, the network outputs the corresponding vector <MATH>y&#8407;</MATH>. Take this claim with a pinch of salt, since if your neural network outputs exactly what you want, it may mean that it has learned the training set too well and may not be able to accurately predict the output of a samples <MATH>x&#8407;<sub>0</sub></MATH> that it has never seen.
-If we carry on with our reasoning, we want our vectors <MATH>x&#8407;<sub>N</sub></MATH>, remember, the last vectors of our network to be as close as possible to <MATH>y&#8407;</MATH>.
+If we carry on with our reasoning, we want our vectors <MATH>x&#8407;<sub>N</sub></MATH> (the last vectors of our network) to be as close as possible to <MATH>y&#8407;</MATH>.
 The objective function is the way we measure the similarity between those vectors. One of the most common objective functions is:
 
 ![nn_objective_function](/assets/images/sec_3.png)
