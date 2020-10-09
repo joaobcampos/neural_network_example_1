@@ -27,7 +27,7 @@ Performing some calculations (see the Annex) we can see that their derivatives a
 ![derivative_activation_functions](/assets/images/sec_2_2.png)
 
 
-As you can see, you obtain the derivative of each function as a function of itself. You may have noticed the index in the softmax function. These activation functions will be applied to each element of a vector. While the sigmoid or the hyperbolic functions only take into consideration the vector itself, the softmax function takes into account all the elements of the vector. Although these are the activation functions considered in this post, we have many others: the ReLU [6], [7], the sinusoid, the softplus or the identity used in [8].
+As you can see, you obtain the derivative of each function as a function of itself. You may have noticed the index in the softmax function. These activation functions will be applied to each element of a vector. While the sigmoid or the hyperbolic functions are applied to each element only, the softmax function takes into account all the elements of the vector when applied to a single element. Although these are the activation functions considered in this post, we have many others: the ReLU [6], [7], the sinusoid, the softplus or the identity used in [8].
 
 ## Purpose of a network: Learn from data
 The two previous sections described the elements of a neural network. The knots and bolts of the device. However, this tells us nothing about its purpose, and its purpose is to learn from data. For that we need a set of input/output pairs. 
